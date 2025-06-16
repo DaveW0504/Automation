@@ -1,0 +1,20 @@
+- hosts: localhost
+  become: yes
+  tasks:
+
+    - name: Update apt cache
+      apt: update_cache=yes
+
+    - name: Install latest version of Apache
+      apt: name=apache2 update_cache=yes state=latest
+
+    - name: delete index.html file for apache
+      ansible.builtin.file:
+        path: /var/www/html/index.html
+        state: absent
+
+    - name: create current index.html file for apache
+      ansible.builtin.file:
+        path: /etc/foo.conf
+        state: touch
+        #mode: u=rw,g=r,o=r
