@@ -8,7 +8,7 @@ variable "secret_key" {
 
 variable "name" {
  type = string
- default= "David.W"
+ default= "[name]"
 }
 
 variable  "ami_app" {
