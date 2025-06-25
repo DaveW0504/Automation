@@ -13,10 +13,10 @@ variable "name" {
 
 variable  "ami_app" {
  type = string
- default = "ami-0ff1c68c6e837b183"
+ default = "ami-[ENTER AMI NUMBER]"
 }
 
 variable  "ssh_key" {
  type = string
- default = "mykey"
+ default = "[ENTER YOUR SSH KEY HERE]"
 }
